@@ -1,0 +1,13 @@
+name: contextfile
+on: push
+jobs: 
+  describe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print all the context files
+        run: |
+          echo "REPOSITORY: ${{ github.repository }}"
+          echo "BRANCH: ${{ github.ref }}"
+          echo "COMMIT: ${{ github.sha }}"
+          echo "EVENT NAME: ${{ github.event_name }}"
+          echo "RUNNER OS: ${{ runner.os }}"
