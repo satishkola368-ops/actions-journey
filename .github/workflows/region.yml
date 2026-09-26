@@ -1,0 +1,8 @@
+name: repositoryvarianle
+on: push
+job:
+  deploy:
+    runs-on: ubuntu-latest
+steps:
+  -name: deploy-region
+   run: echo "Deploying to ${{ vars.DEPLOY_REGION }}"  
