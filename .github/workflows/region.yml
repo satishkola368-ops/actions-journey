@@ -1,8 +1,8 @@
-name: repositoryvarianle
+name: region
 on: push
-job:
-  deploy:
+jobs:
+  deploy-info:
     runs-on: ubuntu-latest
-steps:
-  -name: deploy-region
-   run: echo "Deploying to ${{ vars.DEPLOY_REGION }}"  
+    steps:
+      - name: Show the target region
+        run: echo "Deploying to ${{ vars.DEPLOY_REGION }}"
