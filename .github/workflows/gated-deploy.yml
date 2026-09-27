@@ -1,0 +1,11 @@
+name: conditionals
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        run: echo "Running tests..."
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: echo "Deploying application..."  
