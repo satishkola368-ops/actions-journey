@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 echo "requests==2.32.3" > requirements.txt
  
+=======
+requests==2.32.3
+>>>>>>> 00f1bee (Add dependency install workflow with pip cache)

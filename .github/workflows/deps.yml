@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Cache pip downloads
 on: push
 jobs:
@@ -5,6 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+=======
+name: deps
+on: push
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+>>>>>>> 00f1bee (Add dependency install workflow with pip cache)
       - name: Cache pip downloads
         uses: actions/cache@v4
         with:
@@ -12,6 +23,11 @@ jobs:
           key: pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             pip-
+<<<<<<< HEAD
       - name: install dependencies
         run: python3 -m pip install --user -r requirements.txt      
 
+=======
+      - name: Install dependencies
+        run: python3 -m pip install --user -r requirements.txt
+>>>>>>> 00f1bee (Add dependency install workflow with pip cache)
