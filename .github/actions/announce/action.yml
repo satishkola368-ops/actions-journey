@@ -1,0 +1,15 @@
+name: announce
+description: Print a start-of-job announcement
+inputs:
+  app-name:
+    description: Name of the app being built
+    required: true
+  environment:
+    description: Target environment
+    required: false
+    default: staging
+runs:
+  using: composite
+  steps:
+    - run: echo "Building ${{ inputs.app-name }} for ${{ inputs.environment }}"
+      shell: bash
