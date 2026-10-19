@@ -1,0 +1,13 @@
+name: tidy
+on: push
+jobs:
+  tidy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: tidy
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: list the files
+        run: ls
